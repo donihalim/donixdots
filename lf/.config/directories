@@ -1,0 +1,11 @@
+# You can add comments to these files with #
+h	~/
+d	~/doc
+D	~/dld
+m	~/snd
+pp	~/pix
+vv	~/vid
+cf	${XDG_CONFIG_HOME:-$HOME/.config}
+cac	${XDG_CACHE_HOME:-$HOME/.cache}
+sc 	~/.local/bin
+mn	/mnt

@@ -1,0 +1,60 @@
+/*
+ * Settings For X
+ */
+
+/* font settings */
+Xft.antialias:  1
+Xft.autohint:   0
+Xft.dpi:        96
+Xft.hinting:    1
+Xft.hintstyle:  hintslight
+Xft.lcdfilter:  lcddefault
+Xft.rgba:       rgb
+
+/* code-dark color scheme */
+#define base00 #1C1C1C
+#define base01 #262626
+#define base02 #303030
+#define base03 #3C3C3C
+#define base04 #808080
+#define base05 #D4D4D4
+#define base06 #E9E9E9
+#define base07 #FFFFFF
+#define base08 #D16969
+#define base09 #B5CEA8
+#define base0A #D7BA7D
+#define base0B #608B4E
+#define base0C #9CDCFE
+#define base0D #569CD6
+#define base0E #C586C0
+#define base0F #CE9178
+
+/* dmenu settings */
+dmenu.font: JetBrains Mono:size=9
+
+/* st settings */
+st.font: JetBrains Mono:size=9
+st.borderpx: 2
+st.alpha: 1.0
+
+st.foreground:   base05
+st.background:   base00
+st.cursorColor:  base05
+
+st.color0:       base00
+st.color1:       base08
+st.color2:       base0B
+st.color3:       base0A
+st.color4:       base0D
+st.color5:       base0E
+st.color6:       base0C
+st.color7:       base05
+
+st.color8:       base03
+st.color9:       base08
+st.color10:      base0B
+st.color11:      base0A
+st.color12:      base0D
+st.color13:      base0E
+st.color14:      base0C
+st.color15:      base07

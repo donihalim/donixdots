@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/local/bin/dmenu -i -m 0 -l 8

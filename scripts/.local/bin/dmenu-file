@@ -1,0 +1,13 @@
+#!/bin/bash
+
+while true; do
+    open=$(ls --group-directories-first --file-type | dmenu -p open: -l 5 "$@")
+    if [[ -d "$open" ]]; then
+        cd "$open"
+    else
+        if [[ "$open" != "" ]]; then
+            mimeopen -n "$open"
+        fi
+        exit 0
+    fi
+done

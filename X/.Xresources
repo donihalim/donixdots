@@ -29,12 +29,9 @@ Xft.rgba:       rgb
 #define base0E #C586C0
 #define base0F #CE9178
 
-/* dmenu settings */
-dmenu.font: JetBrains Mono:size=9
-
 /* st settings */
-st.font: JetBrains Mono:size=9
-st.borderpx: 2
+st.font: FuraCode Nerd Font:sytle=Medium,Regular:size=9
+st.borderpx: 0
 st.alpha: 1.0
 
 st.foreground:   base05

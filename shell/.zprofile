@@ -1,7 +1,7 @@
 #!/bin/zsh
 
-# Adds `~/.local/bin` to $PATH
-export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
+# PATH
+export PATH="$PATH:$HOME/.local/bin:$HOME/.local/bin/statusbar:$HOME/.local/pip/bin"
 
 # Default programs:
 export EDITOR="nvim"
@@ -32,6 +32,11 @@ export QT_QPA_PLATFORMTHEME="gtk2"	# Have QT use gtk2 theme.
 export MOZ_USE_XINPUT2="1"		# Mozilla smooth scrolling/touchpads.
 export AWT_TOOLKIT="MToolkit wmname LG3D"	#May have to install wmname
 export _JAVA_AWT_WM_NONREPARENTING=1	# Fix for Java applications in dwm
+export PYTHONUSERBASE="$HOME/.local/pip"
+
+# Clipmenu Environment Variables
+export CM_LAUNCHER=dmenu-clipmenu
+export CM_DIR=/tmp/clipmenu
 
 # This is the list for lf icons:
 export LF_ICONS="di=📁:\

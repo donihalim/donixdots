@@ -19,7 +19,6 @@ setxkbmap -option "caps:swapescape" &
 nitrogen --restore &
 dunst &
 dwmblocks &
-clipmenud &
 
 # relaunch DWM if the binary changes, otherwise exit.
 csum=$(sha1sum $(which dwm))

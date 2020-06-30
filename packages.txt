@@ -1,18 +1,14 @@
-asp
 chafa
 clipmenu
 dnscrypt-proxy
+dnscrypt-proxy-runit
 dunst
 firefox
 fzf
 git
-gnome-themes-extra
-gnu-free-fonts
+go
 highlight
 htop
-lf-bin
-libnotify
-libxft-bgra
 libxinerama
 light
 lxappearance
@@ -24,6 +20,8 @@ mpv
 ncmpcpp
 neofetch
 neovim
+networkmanager
+networkmanager-runit
 newsboat
 nitrogen
 noto-fonts
@@ -36,7 +34,7 @@ pamixer
 perl-file-mimeinfo
 pulseaudio
 pulsemixer
-reflector
+scrot
 stow
 sxiv
 telegram-desktop
@@ -47,7 +45,6 @@ ttf-dejavu
 ttf-droid
 ttf-fira-code
 ttf-font-awesome
-ttf-iosevka-term
 ttf-jetbrains-mono
 ttf-joypixels
 ttf-liberation
@@ -57,9 +54,12 @@ ttf-roboto-mono
 ttf-ubuntu-font-family
 unrar
 unzip
+vim
 wget
+which
 xcompmgr
 xdg-user-dirs
+xdo
 xdotool
 xf86-input-libinput
 xf86-video-amdgpu
@@ -70,9 +70,13 @@ xorg-xrandr
 xorg-xset
 xorg-xsetroot
 xsel
-yay
 youtube-dl
 zathura
 zathura-pdf-poppler
 zsh
 zsh-completions
+
+# AUR
+yay
+lf-bin
+libxft-bgra

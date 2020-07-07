@@ -4,7 +4,7 @@
 # Show  if connected to ethernet or  if none.
 
 case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
-	down) wifiicon="ﲁ " ;;
+	down) wifiicon="ﲁ NO WIFI " ;;
 	up) wifiicon="$(awk '/^\s*w/ { print "", int($3 * 100 / 70) "% " }' /proc/net/wireless)" ;;
 esac
 

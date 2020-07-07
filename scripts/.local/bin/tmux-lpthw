@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# set session name
+SESSION="STUDY"
+SESSIONEXISTS=$(tmux list-sessions 2> /dev/null | grep $SESSION)
+
+# create tmux session if only it doesn't already exist
+if [ "$SESSIONEXISTS" = "" ]
+then
+    # start new session with defined name
+    tmux new-session -d -s $SESSION
+
+    # name first pane and change the working dir and start nvim
+    tmux rename-window -t 0 'MAIN'
+    tmux send-keys "cd $HOME/doc/std/lpthw && nvim" C-m
+
+    # split pane vertical by 20% and change the working dir
+    tmux split-window -v -p 20
+    tmux send-keys "cd $HOME/doc/std/lpthw && clear && pwd" C-m
+
+    # change focus to first pane
+    tmux select-pane -t 0.0
+
+    # split pane horizontal by 45%, change the working dir and show
+    # the content
+    tmux split-window -h -p 45
+    tmux send-keys "cd $HOME/doc/std/lpthw && ls -l" C-m
+
+    # change focus to first pane
+    tmux select-pane -t 0.0
+fi
+
+# attach session on the Main window
+tmux attach-session -t $SESSION

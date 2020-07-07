@@ -1,0 +1,9 @@
+#!/bin/sh
+
+power=$(printf "shutdown\\nreboot\\nsuspend" | dmenu -p "Action:")
+case "$power" in
+	shutdown) sudo shutdown -h now;;
+	reboot) sudo reboot;;
+	# belum nemu cara suspend di runit sistem
+	suspend) echo "suspended";;
+esac

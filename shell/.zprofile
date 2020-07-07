@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # PATH
-export PATH="$PATH:$HOME/.local/bin:$HOME/.local/bin/statusbar:$HOME/.local/pip/bin"
+export PATH=$PATH:$HOME/.local/bin:$HOME/.local/bin/statusbar:$HOME/.local/pip/bin
 
 # Default programs:
 export EDITOR="nvim"

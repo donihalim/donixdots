@@ -30,7 +30,7 @@ Xft.rgba:       rgb
 #define base0F #CE9178
 
 /* st settings */
-st.font: FuraCode Nerd Font:sytle=Medium,Regular:size=9
+st.font: FuraCode Nerd Font:sytle=Medium,Regular:size=10
 st.borderpx: 0
 st.alpha: 1.0
 

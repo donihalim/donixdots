@@ -11,16 +11,17 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/goyo.vim'
-Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'jreybert/vimagit'
 Plug 'lukesmithxyz/vimling'
 Plug 'vimwiki/vimwiki'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-commentary'
-Plug 'kovetskiy/sxhkd-vim'
 Plug 'ap/vim-css-color'
 Plug 'tomasiser/vim-code-dark'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'cespare/vim-toml'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 "set bg=light
@@ -55,15 +56,20 @@ let g:airline_theme = 'codedark'
 	set splitbelow splitright
 
 " Nerd tree
+	let g:NERDTreeDirArrowExpandable = ''
+	let g:NERDTreeDirArrowCollapsible = ''
+	let NERDTreeDirArrows=1
+	let NERDTreeChDirMode=2
+	let NERDTreeMinimalUI=1
 	autocmd StdinReadPre * let s:std_in=1
 	autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | wincmd p | ene | exe 'NERDTree' argv()[0] | endif
 	map <leader>n :NERDTreeToggle<CR>
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-    if has('nvim')
-        let NERDTreeBookmarksFile = stdpath('data') . '/NERDTreeBookmarks'
-    else
-        let NERDTreeBookmarksFile = '~/.vim' . '/NERDTreeBookmarks'
-    endif
+    	if has('nvim')
+        	let NERDTreeBookmarksFile = stdpath('data') . '/NERDTreeBookmarks'
+    	else
+        	let NERDTreeBookmarksFile = '~/.vim' . '/NERDTreeBookmarks'
+    	endif
 
 " vimling:
 	nm <leader>d :call ToggleDeadKeys()<CR>

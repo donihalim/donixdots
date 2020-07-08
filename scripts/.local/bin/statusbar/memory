@@ -1,0 +1,4 @@
+#!/bin/sh
+# show used memory in percent
+
+free | sed -n '2{p;q}' | awk '{printf ("%2.f%%\n", ( $3 / $2 * 100))}'
